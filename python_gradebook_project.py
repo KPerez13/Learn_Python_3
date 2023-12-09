@@ -25,7 +25,7 @@ gradebook=[["physics", 98], ["calculus", 97], ["poetry", 85], ["history", 88]]
 
 #Step4
 #Print gradebook. Does it look how you expected it would?
-print(gradebook)
+#print(gradebook)
 
 #output should look like this:
 #[['physics', 98], ['calculus', 97], ['poetry', 85], ['history', 88]]
@@ -35,16 +35,32 @@ print(gradebook)
 #Use the .append() method to add a list with the values of "computer science" and an associated grade value of 100 to our two-dimensional list of gradebook.
 
 gradebook.append(["computer science",100])
-print(gradebook)
+##print(gradebook)
 
 # Step6
 # Your grade for "visual arts" just came in! You got a 93!
 # Use append to add ["visual arts", 93] to gradebook.
 
 gradebook.append(["visual arts", 93])
-#test to see if this works, looks like it does :) print(gradebook)
+#test to see if this works, looks like it does :) 
+#print(gradebook)
 
 #Step 7
 #Our instructor just told us they made a mistake grading and are rewarding an extra 5 points for our visual arts class.
 #Access the index of the grade for your visual arts class and modify it to be 5 points greater.
+gradebook[-1][-1]=98
+#print(gradebook)
 
+#Step8
+#You decided to switch from a numerical grade value to a Pass/Fail option for your poetry class.
+#Find the grade value in your gradebook for your poetry class and use the .remove() method to delete it.
+gradebook[2].remove(85)
+#print(gradebook)
+
+#Step 9
+#Use the .append() method to then add a new "Pass" value to the sublist where your poetry class is located.
+gradebook[2].append("Pass")
+#print(gradebook)
+
+full_gradebook = last_semester_gradebook + gradebook
+print(full_gradebook)
